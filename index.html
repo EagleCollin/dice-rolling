@@ -4,10 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css"/>
+    <title>Dice Rolling</title>
 </head>
 <body>
-    <h1>Hi</h1>
-    <script src="./dice-roll.js"></script>
+    <main class="container">
+        <h1>Roll Your Dice!!</h1>
+        <form class="quantity-form">
+            <!-- type of dice -->
+            <div>
+                <label for="dice">Type of Dice</label>
+                <button type="submit" class="btn-d20" aria-label="Roll d20"></button>
+                <button type="submit" class="btn-d4" aria-label="Roll d4"></button>
+            </div>
+
+            <!-- number of dice -->
+            <div>
+                <label for="quantiy">
+                    Number of Dice <span class="quantity-label"></span>
+                </label>
+                <input
+                type="range"
+                name="quantity"
+                id="quantity"
+                value="1"
+                min="1"
+                max="15"
+                step="1"
+                />
+            </div>
+        </form>
+        <!-- Output -->
+        <section class="data-display"><p class="output"></p></section>
+    </main>
+    
+    <!-- <script src="./dice-roll.js"></script> -->
+    <script src="./d4.js"></script>
 </body>
 </html>

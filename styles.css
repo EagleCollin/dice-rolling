@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    color: #0f172a;
+    background-color: #f8fafc;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #0c4a6e;
+  }
+
+.container {
+    text-align: center;
+    margin-top: 64px;
+  }
+
+.btn-d20 {
+    background: url("./d20.webp") no-repeat center/cover;
+    cursor: pointer;
+    padding: 30px 30px
+  }
+
+  .btn-d4 {
+      background:url("./d4.png") no-repeat center/cover;
+      cursor: pointer;
+      padding: 30px 30px
+  }
+
+.quantity-form{
+    display: flex;
+    flex-direction: column;
+  }
+
+.quantity-form label,
+.quantity-form input {
+      font-size: 1.5rem;
+      margin:0.5em auto;
+  }
+
+.quantity-label {
+      background-color: #bae6fd;
+      padding: 0.5em 0.75em;
+      border-radius: 8px;
+      font-size: 1.25rem;
+  }
+
+.data-display {
+    border: 3px solid #0369a1;
+    border-radius: 100px;
+    min-width: 300px;
+    width: 20%;
+    margin: 2em auto;
+  }
+
+.output {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
