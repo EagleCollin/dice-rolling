@@ -8,8 +8,8 @@ const d12 = document.querySelector(".btn-d12");
 const d20 = document.querySelector(".btn-d20");
 
 //roll function
-function rollDice(sideDie){
-    
+function rollDice(e, sideDie){
+    e.preventDefault();
     const rolled = []
     for (let i=0; i<number; i++){
         const dice = Math.floor(Math.random() * sideDie) + 1
@@ -20,55 +20,57 @@ function rollDice(sideDie){
     
 }
 
+//change quantity display
 function updateQuantityLabel() {
     const quantity = number.value;
     numberLabel.innerText = quantity;
 }
 
+//roll different dice
 function rollD4(e){
     if (!e.target.matches(".btn-d4")) return;
 
-    rollDice(4);
+    rollDice(e, 4);
 }
 
 function rollD8(e){
     if (!e.target.matches(".btn-d8")) return;
 
-    rollDice(8);
+    rollDice(e, 8);
 }
 
 function rollD10(e){
     if (!e.target.matches(".btn-d10")) return;
 
-    rollDice(10);
+    rollDice(e, 10);
 }
 
 function rollD12(e){
     if (!e.target.matches(".btn-d12")) return;
 
-    rollDice(12);
+    rollDice(e, 12);
 }
 
 function rollD20(e){
     if (!e.target.matches(".btn-d20")) return;
 
-    rollDice(20);
+    rollDice(e, 20);
 }
 
-const total = rollDice();
-console.log(total);
+const total = rollDice(e,20);
+console.log(total)
 
 //event listeners: when dice is selected
-d4.addEventListener("click", rollD4);
-d8.addEventListener("click", rollD8);
-d10.addEventListener("click", rollD10)
-d12.addEventListener("click", rollD12)
-d20.addEventListener("click", rollD20)
+d4.addEventListener("click", ()=>rollD4());
+d8.addEventListener("click", ()=>rollD8());
+d10.addEventListener("click", ()=>rollD10())
+d12.addEventListener("click", ()=>rollD12())
+d20.addEventListener("click", ()=>rollD20())
 
 //event listener: when hits enter for quantity
 number.addEventListener("input", updateQuantityLabel);
 
 //on application start
-rollDice(20);
+rollDice(e, 20)
 
 updateQuantityLabel();
