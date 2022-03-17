@@ -14,17 +14,35 @@ body {
     margin-top: 64px;
   }
 
-.btn-d20 {
-    background: url("./d20.webp") no-repeat center/cover;
-    cursor: pointer;
-    padding: 30px 30px
-  }
-
-  .btn-d4 {
+.btn-d4 {
       background:url("./d4.png") no-repeat center/cover;
       cursor: pointer;
       padding: 30px 30px
   }
+
+.btn-d8{
+  background: url("./d8.jpg") no-repeat center/cover;
+  cursor: pointer;
+  padding: 30px 30px
+}  
+
+.btn-d10 {
+  background: url("./d10.png") no-repeat center/cover;
+  cursor: pointer;
+  padding: 30px 30px
+}
+
+.btn-d12 {
+  background: url("./d12.jpg") no-repeat center/cover;
+  cursor: pointer;
+  padding: 30px 30px
+}
+
+.btn-d20 {
+  background: url("./d20.webp") no-repeat center/cover;
+  cursor: pointer;
+  padding: 30px 30px
+}
 
 .quantity-form{
     display: flex;
