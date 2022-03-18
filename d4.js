@@ -11,7 +11,7 @@ const d20 = document.querySelector(".btn-d20");
 function rollDice(e, sideDie){
     e.preventDefault();
     let rolled = []
-    for (let i=0; i<numberDice; i++){
+    for (let i=0; i<numberDice.value; i++){
         let dice = Math.floor(Math.random() * sideDie) + 1
         rolled.push(dice)
         console.error()
@@ -27,6 +27,13 @@ function rollDice(e, sideDie){
 function updateQuantityLabel() {
     const quantity = numberDice.value;
     numberLabel.innerText = quantity;
+}
+
+//add dice together
+function addDice(e){
+    if (e.target.match(".btn-20")) return;
+
+    
 }
 
 //roll different dice
