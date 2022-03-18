@@ -16,3 +16,5 @@ console.log(d12)
 const d20 = Math.floor(Math.random() * 20) + 1
 console.log(d20)
 
+document.querySelector("#quantity");
+numberDice.addEventListener("input", updateQuantityLabel);
