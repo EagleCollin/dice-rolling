@@ -69,11 +69,11 @@ function rollD20(e){
 
 
 //event listeners: when dice is selected
-d4.addEventListener("click", (e)=>rollD4(e));
-d8.addEventListener("click", (e)=>rollD8(e));
-d10.addEventListener("click", (e)=>rollD10(e))
-d12.addEventListener("click", (e)=>rollD12(e))
-d20.addEventListener("click", (e)=>rollD20(e))
+d4.addEventListener("submit", (e)=>rollD4(e));
+d8.addEventListener("submit", (e)=>rollD8(e));
+d10.addEventListener("submit", (e)=>rollD10(e))
+d12.addEventListener("submit", (e)=>rollD12(e))
+d20.addEventListener("submit", (e)=>rollD20(e))
 
 //event listener: when hits enter for quantity
 numberDice.addEventListener("input", updateQuantityLabel);
