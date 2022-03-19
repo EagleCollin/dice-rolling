@@ -10,6 +10,7 @@ const d20 = document.querySelector(".btn-d20");
 //roll function
 function rollDice(e, sideDie){
     e.preventDefault();
+    const initialValue = 0
     let rolled = []
     for (let i=0; i<numberDice.value; i++){
         let dice = Math.floor(Math.random() * sideDie) + 1;
@@ -19,7 +20,7 @@ function rollDice(e, sideDie){
 
     diceTotal.innerText = `${rolled}`;
     console.log(rolled);
-    addDice(rolled);
+    if (!e.target.match(".btn-20")){const diceSum = rolled.reduce((previousValue,currentValue) => previousValue + currentValue, initialValue);}
     return rolled;
     
 }
@@ -33,8 +34,6 @@ function updateQuantityLabel() {
 //add dice together
 function addDice(e){
     if (e.target.match(".btn-20")) return;
-
-    rolled.reduce((a,b) => ())
 }
 
 //event listeners: when dice is selected
