@@ -19,4 +19,7 @@ console.log(d20)
 document.querySelector("#quantity");
 numberDice.addEventListener("input", updateQuantityLabel);
 
-if (Event.target.matches(".btn-20")) return;
+function updateMod(){
+    const modDisplay = modifiers.value;
+    modLabel.innerText = modDisplay;
+}
