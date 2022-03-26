@@ -22,18 +22,25 @@ function rollDice(e, sideDie){
 
     diceRolled.innerText = `${rolled}`;
     console.log(rolled);
-    function addDice(rolled){
+    if (sideDie===20){
+        diceTotal.innerText = null;
+        return;}
+    
+    else {function addDice(rolled){
         
         let initialValue = 0
         let diceSum = rolled.reduce((previousValue,currentValue) => previousValue + currentValue, initialValue);
         diceTotal.innerText = `${diceSum}`
         console.log(diceSum)
         return diceSum;
+        
     }
+
     addDice(rolled)
     return rolled;
-    
+    }
 }
+
 
 //change quantity display
 function updateQuantityLabel() {
@@ -43,7 +50,7 @@ function updateQuantityLabel() {
 
 //add dice together
 function addDice(e){
-    if (e.target.match(".btn-20")) return;
+    
     let initialValue = 0
     let diceSum = rolled.reduce((previousValue,currentValue) => previousValue + currentValue, initialValue);
     return diceSum;
