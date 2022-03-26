@@ -52,7 +52,6 @@ function updateQuantityLabel() {
     numberLabel.innerText = quantity;
 };
 
-<<<<<<< HEAD
 //add dice together
 function addDice(e){
     
@@ -60,12 +59,7 @@ function addDice(e){
     let diceSum = rolled.reduce((previousValue,currentValue) => previousValue + currentValue, initialValue);
     return diceSum;
 }
-=======
-function updateMod(){
-    const modDisplay = modifiers.value;
-    modLabel.innerText = modDisplay;
-};
->>>>>>> 3ca3111a56bca87b5a04e9d073c9e18658f90108
+
 
 // take in modifier argument
 function addMod(){
