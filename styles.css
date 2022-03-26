@@ -62,6 +62,13 @@ body {
       font-size: 1.25rem;
   }
 
+.modifiers-label {
+  background-color: #bae6fd;
+  padding: 0.5em 0.75em;
+  border-radius: 8px;
+  font-size: 1.25rem;
+}
+
 .data-display {
     border: 3px solid #0369a1;
     border-radius: 100px;
