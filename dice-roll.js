@@ -19,7 +19,3 @@ console.log(d20)
 document.querySelector("#quantity");
 numberDice.addEventListener("input", updateQuantityLabel);
 
-function updateMod(){
-    const modDisplay = modifiers.value;
-    modLabel.innerText = modDisplay;
-}
