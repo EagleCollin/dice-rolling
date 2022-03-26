@@ -1,7 +1,10 @@
 const numberDice = document.querySelector("#quantity");
 const numberLabel = document.querySelector(".quantity-label");
 const diceRolled = document.querySelector(".rolled-dice");
-const diceTotal = document.querySelector(".dice-total")
+const diceTotal = document.querySelector(".dice-total");
+const overTotal = document.querySelector(".final-total");
+const modifiers = document.querySelector("#modifiers")
+const modLabel = document.querySelector(".modifiers-label");
 const d4 = document.querySelector(".btn-d4");
 const d8 = document.querySelector(".btn-d8");
 const d10 = document.querySelector(".btn-d10");
@@ -9,6 +12,7 @@ const d12 = document.querySelector(".btn-d12");
 const d20 = document.querySelector(".btn-d20");
 
 let rolled = [];
+let diceSum = 0;
 //roll function
 function rollDice(e, sideDie){
     e.preventDefault();
@@ -46,8 +50,9 @@ function rollDice(e, sideDie){
 function updateQuantityLabel() {
     const quantity = numberDice.value;
     numberLabel.innerText = quantity;
-}
+};
 
+<<<<<<< HEAD
 //add dice together
 function addDice(e){
     
@@ -55,16 +60,28 @@ function addDice(e){
     let diceSum = rolled.reduce((previousValue,currentValue) => previousValue + currentValue, initialValue);
     return diceSum;
 }
+=======
+function updateMod(){
+    const modDisplay = modifiers.value;
+    modLabel.innerText = modDisplay;
+};
+>>>>>>> 3ca3111a56bca87b5a04e9d073c9e18658f90108
+
+// take in modifier argument
+function addMod(){
+    const numAdded = modifiers.value
+    let completeTotal = diceSum + numAdded;
+    overTotal.innerText = `${completeTotal}`;
+    return completeTotal;
+};
 
 //event listeners: when dice is selected
-d4.addEventListener("click", (e)=>rollDice(e, 4));
-d8.addEventListener("click", (e)=>rollDice(e, 8));
-d10.addEventListener("click", (e)=>rollDice(e, 10))
-d12.addEventListener("click", (e)=>rollDice(e, 10))
-d20.addEventListener("click", (e)=>rollDice(e, 20))
-
-//event listener: when hits enter for quantity
-numberDice.addEventListener("input", updateQuantityLabel);
+d4.addEventListener("click", (e)=>rollDice(e, 4), addMod());
+d8.addEventListener("click", (e)=>rollDice(e, 8), addMod());
+d10.addEventListener("click", (e)=>rollDice(e, 10), addMod())
+d12.addEventListener("click", (e)=>rollDice(e, 10), addMod())
+d20.addEventListener("click", (e)=>rollDice(e, 20), addMod())
 
 //on application start
 updateQuantityLabel();
+updateMod();
