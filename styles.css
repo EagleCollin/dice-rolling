@@ -1,7 +1,7 @@
 body {
     margin: 0;
     color: #0f172a;
-    background-color: #f8fafc;
+    background-color: #3e566e;
   }
   
   h1 {
@@ -11,7 +11,7 @@ body {
 
 .container {
     text-align: center;
-    margin-top: 64px;
+    margin:auto
   }
 
 .btn-d4 {
