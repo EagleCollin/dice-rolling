@@ -6,10 +6,10 @@ body {
 h1 {
   font-size: 3rem;
   color: #0c4a6e;
-  line-height: 1em;
 }
-label {
-  line-height: 2em;
+
+.type {
+  line-height: 1.75em;
 }
 
 .container {
